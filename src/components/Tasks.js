@@ -10,7 +10,16 @@ export default function Tasks(props) {
     <div className='Tasks'>
       <ul>
         {props.userTasks.map((item,index)=>{
-            return <li key={index}>{item}<img onClick={()=>{props.remove(index)}}  alt="#" src={done_logo}></img></li>
+            return(
+              <li 
+              className={item.isDone?'isDone':null}
+              style={item.isDone?{backgroundColor:'greenyellow'}:{backgroundColor:'#fca311'}}
+              key={index}>{item.task}
+             
+                <img style={item.isDone?{top:'10%'}:null} onClick={()=>{props.taskDone(index)}}  alt="#" src={done_logo}/>
+             </li>
+            )
+           
         })}
       </ul>
     </div>

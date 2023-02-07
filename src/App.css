@@ -109,7 +109,24 @@ body,html{
   display: flex;
   justify-content: center;
   background-color: #14213d;
+
   
+}
+
+.btn{
+  text-decoration: none;
+  display: inline-block;
+  background-color: #fca311;
+  border: none;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn:hover{
+  color:#fca311;
+  background-color: #000;
+  cursor: pointer;
+  transition: ease-out .2s;
 }
 
 
@@ -117,7 +134,7 @@ body,html{
 
 .ToDolist{
   width: 700px;
-  height: 700px;
+  height: 100%;
   display: flex;
   border-radius: 15px;
   flex-direction: column;
@@ -153,20 +170,8 @@ body,html{
   padding: 10px;
 }
 
-.ToDolist form button {
-  text-decoration: none;
-  display: inline-block;
-  background-color: #fca311;
-  border: none;
-  height: 50px;
-  font-family: 'Montserrat', sans-serif;
-}
-.ToDolist form button:hover {
-  color:#fca311;
-  background-color: #000;
-  cursor: pointer;
-  transition: ease-out .2s;
-}
+
+
 
 .Tasks{
   overflow-y:scroll;
@@ -174,10 +179,13 @@ body,html{
   margin-top: 40px;
   
 }
+.isDone{
+  text-decoration: line-through;
+  background-color: greenyellow;
+}
 
 
 .Tasks ul li{
- background-color: #fca311;
  margin-top: 30px;
  padding: 10px 10px 10px 30px;
  color: #14213d;
@@ -198,10 +206,12 @@ body,html{
   top:20%
 }
 .Tasks ul li img:hover{
-  top:10%;
+ 
   cursor: pointer;
-  transition: ease-in-out;
-  transition-duration: .2s;
+  
+}
+.clicked{
+  top:15% 
 }
 
 .Tasks ul{
@@ -214,4 +224,6 @@ padding:  0 20px 0 20px;
   border-color: red;
 
 }
+
+
 
