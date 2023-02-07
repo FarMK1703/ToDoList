@@ -44,10 +44,12 @@ export class ToDoList extends Component {
 
 
   taskDone=(index)=>{
-    console.log(index)
     const tasks=this.state.userTasks
     tasks[index].isDone=true
     this.setState({userTasks:tasks})
+
+    let scroll=document.querySelector('li')
+    scroll.scrollTo(0,1000)
     
   }
 
